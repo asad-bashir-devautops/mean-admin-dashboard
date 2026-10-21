@@ -4,6 +4,7 @@
   const cors = require('cors');
 
   const app = express();
+  app.get('/health', (req, res) => res.json({ status: 'ok' }));
 
   // Middleware
   app.use(cors());
